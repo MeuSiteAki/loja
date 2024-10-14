@@ -1,0 +1,39 @@
+# Imagem Surgir para Frente da Página
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Surgir</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .imagem {
+            width: 300px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 3s ease, transform 3s ease;
+        }
+        .imagem.surgir {
+            opacity: 2;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <img src="foto1.png" alt="Imagem" class="imagem" id="imagem">
+    <script>
+        window.onload = function() {
+            const imagem = document.getElementById('imagem');
+            imagem.classList.add('surgir');
+        };
+    </script>
+</body>
+</html>

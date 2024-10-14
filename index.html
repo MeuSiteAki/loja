@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Roupas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('capa.png');
+    background-size: contain;
+    background-position: center;
+    color: white;
+  
+}
+
+.container {
+    text-align: center;
+    padding: 200px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 28px;
+    color: white;
+    background-color: #ff4081;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+img{clip-path: circle(50% at 50% 50%);
+width: 350px;}
+.imagem {
+            width: 300px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 3s ease, transform 3s ease;
+        }
+        .imagem.surgir {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+        text-align: center;
+        padding: 10px;
+        background-color: rgb(0 0 0 / 50%);
+        color: white;
+    }
+    h3{font-family: Verdana;}
+
+</style>
+<body>
+    <div class="container">
+        <img src="foto1.png" alt="Imagem" class="imagem" id="imagem">
+        <script>
+            window.onload = function() {
+                const imagem = document.getElementById('imagem');
+                imagem.classList.add('surgir');
+            };
+        </script>
+        <h1>Bem-vindo à Nossa Loja</h1>
+        <p>Descubra as últimas tendências e estilos.</p>
+        <a href="index2.html" class="btn">Ver Produtos</a>
+    </div>
+    <footer>
+        <h3>Rua Buriti, 206b, Vila Emanuela, Itinga do Maranhão.</h3>
+        <p>&copy; 2024 Carlos Rocha Web Designer. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
